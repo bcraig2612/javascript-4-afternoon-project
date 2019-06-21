@@ -20,7 +20,13 @@
   
 
 //Code Here
-
+let user = {
+  username: "gEnErIc_UsErNaMe",
+  email: "mYeMaIl@gmail.com",
+  getUsername: function() {
+    return this.username;
+  }
+};
 
 
 ////////// PROBLEM 2 //////////
@@ -42,7 +48,11 @@ class Animal {
 }
 
 //Code Here
-
+let animal1 = new Animal(
+  "Mr.Krabs",
+  "Crab",
+  "Money"
+);
 
 
 ////////// PROBLEM 3 //////////
@@ -62,7 +72,7 @@ let who = {
 }
 
 //Code Here
-
+let whoSaysHi = sayHi.bind(who, "ALOHA");
 
 
 ////////// PROBLEM 4 //////////
@@ -72,22 +82,22 @@ let who = {
 */
 
 function whatIsThis() {
-  return this
+  return this;
 }
 
 // uncomment the line below and tell us what the context of "this" is for whatIsThis()
-//let context1 = ???
+let context1 = window1;
 
 let product = {
   name: 'snake plant',
   price: 45.32,
   description: 'Beautiful plant that can help filter the air inside your house.'
-}
+};
 
-let func = whatIsThis.bind(product)
+let func = whatIsThis.bind(product);
 
 // uncomment the line below and tell us what the context of "this" is when we invoke func
-//let context2 = ???
+let context2 = product;
 
 let vacation = {
   location: 'Hawaii',
@@ -95,15 +105,15 @@ let vacation = {
   days: 7,
   nights: 6,
   whatIsThis: whatIsThis
-}
+};
 
 // uncomment the line below and tell us what the context of "this" is when we invoke vacation.whatIsThis
-//let context3 = ???
+let context3 = vacation;
 
 
 class Family {
   constructor(numParents, numKids, numPets) {
-    this.numParents = numPets;
+    this.numParents = numParents;
     this.numKids = numKids;
     this.numPets = numPets;
   }
@@ -116,4 +126,4 @@ class Family {
 let family1 = new Family(2, 4, 1)
 
 // uncomment the line below and tell us what the context of "this" is for the instance of Family created above.
-//let context4 = ???
+let context4 = family1;
